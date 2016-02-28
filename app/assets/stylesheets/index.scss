@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+// Mixins
+@import "materialize/components/prefixer";
+@import "materialize/components/mixins";
+@import "materialize/components/color";
+
+// override variables
+$primary-color: black !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+// Variables
+@import "materialize/components/variables";
+
+// Reset
+@import "materialize/components/normalize";
+
+// materialize/components
+@import "materialize";
+
+
+// side-nav padding overrides
+header, main, footer {
+  padding-left: 240px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+// navbar overrides
+nav{
+  a.brand-logo{
+    height: 100%;
+
+    img{
+      height: 100%;
+    }
+  }
+
+  li>a>img{
+    vertical-align: middle;
+  }
+}
+
+#landing .slider{
+  .slides li .caption{
+    font-family: Lobster, Impact, Charcoal, sans-serif;
+    top: 30%;
+    font-size: 75px;
+    text-align: center;
+  }
+  ul.indicators{
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+- content_for :javascripts do
+  :javascript
+    var goHome = function(){ location = '/home'; }
+    $('.slider').slider({full_width: true});
+    $('.slider').slider('next');
+    $('.slider').slider('pause');
+    setTimeout(goHome, 5000)
+    document.body.addEventListener('click', goHome, true); 
+
+
+.slider.fullscreen
+  %ul.slides
+    %li
+      = image_tag 'wide_band.png'
+    %li
+      = image_tag 'wide_band.png'
+      .caption.left-align
+        %span.amber-text Classic Fusion Rock

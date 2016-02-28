@@ -1,0 +1,38 @@
+!!!
+%html
+  %head
+    %title Cosmic Fuse
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %header
+      .navbar-fixed
+        %nav
+          .nav-wrapper.container
+            %a.brand-logo.right{href: "#!"}
+              = image_tag 'logo.png'
+            %ul#slide-out.side-nav.fixed
+              %li
+                %a{href: "#!"} Home
+              %li
+                %a{href: "#!"} Photos
+              %li
+                %a{href: "#!"} Events
+              %li
+                %a{href: "#!"} Contacts
+              %li
+                = link_to "https://www.facebook.com/cosmicfuseband", target: "_blank" do
+                  = image_tag 'fb_logo.png'
+                  = 'Facebook'
+            %a.button-collapse{"data-activates" => "slide-out", :href => "#"}
+              %i.mdi-navigation-menu
+    %main
+      = yield
+    %footer.page-footer
+      .footer-copyright
+        .container
+          © 2016 by Cosmic Fuse Band
+          = link_to "https://github.com/llhupp", target: "_blank", class: 'grey-text text-lighten-4 right' do
+            Created by Lyric Hupp
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = yield :javascripts
