@@ -86,3 +86,8 @@ nav{
 .card .card-title{
   font-weight: bold;
 }
+
+// normalize ol numbering
+ol li{
+  list-style-type: decimal;
+}
