@@ -3,6 +3,7 @@
   %head
     %title Cosmic Fuse
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons'
     = csrf_meta_tags
   %body
     %header
@@ -26,7 +27,7 @@
                   = 'Facebook'
             %a.button-collapse{"data-activates" => "slide-out", :href => "#"}
               %i.mdi-navigation-menu
-    %main
+    %main.container
       = yield
     %footer.page-footer
       .footer-copyright

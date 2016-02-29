@@ -1,17 +1,78 @@
 - content_for :javascripts do
   :javascript
-    // do some stuff
+    Materialize.showStaggeredList('.staggered_list');
 
 
-.row
-  .col.s12.m7
-    .card
-      .card-image
-        %img{:src => "images/sample-1.jpg"}
-        %span.card-title Card Title
-      .card-content
-        %p
-          I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.
-      .card-action
-        %a{:href => "#"} This is a link
+.row.flow-text
+  %ul.staggered_list.col.s6
+    %li
+      %div
+        .card.hoverable
+          .card-image.waves-effect.waves-block.waves-light
+            = image_tag 'ike_member.jpg', class: 'activator'
+            %span.card-title.activator.red-text.darken-text-4 T.J. Ike
+          .card-content
+            %div.card-title.activator
+              %span
+                Keys
+                %i.material-icons.right more_vert
+              %ul
+                %li
+                  %small Kurzweil SP88
+                %li
+                  %small Kawai K-4
+                %li
+                  %small Hammond Organ
+          .card-reveal
+            %span.card-title
+              = image_tag 'ike_member.jpg', class: 'circle col s2 responsive-img'
+              T.J. Ike - Keys
+              %i.material-icons.right close
+            %p.caption{style:"clear: both;"}
+              Ike has over 40 years experience working with bands and in studios. He first came to the Twin Cities in 1977 with a blues band our to Iowa knows as The Little Red Rooster Band. In 1978 the band relocated to Minneapolis and cut an album in The Studio in St. Paul. The mixing was done by Sound 80. The title of the album was Authorized Bootleg. The band and the album did well, but the band decided to move back to Iowa where they are now knows as The Blue Band.
+              %br
+              %br
+              Ike remained in the Twin Cities to further pursue his musical career, playing both with local projects and road bands booked out of the area. In addition to Ike's many musical talents, he also has a degree in Audio Recording from Hennepin Technical College in Eden Prairie, MN.
+    %li
+      %div
+        .card.hoverable
+          .card-image.waves-effect.waves-block.waves-light
+            = image_tag 'ellis_member.png', class: 'activator'
+            %span.card-title.activator.red-text.darken-text-4 Tim Ellis
+          .card-content
+            %div.card-title.activator
+              Drums & Percussion
+              %i.material-icons.right more_vert
+          .card-reveal
+            %div.card-title
+              = image_tag 'ellis_member.png', class: 'circle col s2 responsive-img'
+              Tim Ellis - Drums & Percussion
+              %i.material-icons.right close
+            %p.caption{style:"clear: both;"}
+              Tim Ellis, a drummer from St. Paul, Minnesota, has a long history with drums. He has been playing in bands of all genres for over 35 years, while along the way collecting vintage drums. Way back when they weren't called vintage. Rumor has it, Tim opened a shop because he needed a place to store his ballooning collection. 
+              %br
+              %br
+              Tim makes his own line of drums with the Ellis Drum Company line. Production is done right in the shop basement. Tim employs pro drummers in the shop so they know and understand things from a drummer's point of view. Friendly and quality service is a must.
+    %li
+      %div
+        .card.hoverable
+          .card-image.waves-effect.waves-block.waves-light
+            = image_tag 'jj_member.jpg', class: 'activator'
+            %span.card-title.activator.red-text.darken-text-4 James Jamar
+          .card-content
+            %div.card-title.activator
+              Bassist
+              %i.material-icons.right more_vert
+          .card-reveal
+            %span.card-title
+              = image_tag 'jj_member.jpg', class: 'circle col s2 responsive-img'
+              James Jamar - Bassist
+              %i.material-icons.right close
+            %p.caption{style:"clear: both;"}
+              James has been playing on stages throughout the Midwest for over 25 years. As a bassist he values every note he plays, but knows when not to play as well. He is self-taught and through regular practice and studying with other accomplished musicians, seeks constantly to hone his skills.
+              %br
+              %br
+              As an entertainer, James is a dynamic, high energy and infectious performer. "I love to watch you play" and "Man, you are really having fun up there!" are frequent compliments give to him.
+              %br
+              %br
+              James has played in original and commercial bands as a member and a hired gun. His love of music is great enough that he hopes to be playing until his last day.

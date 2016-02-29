@@ -20,6 +20,27 @@ $primary-color-dark: darken($primary-color, 15%) !default;
 @import "materialize";
 
 
+html { 
+  background: image-url("grey_background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// landing page styles
+#landing .slider{
+  .slides li .caption{
+    font-family: Lobster, Impact, Charcoal, sans-serif;
+    top: 30%;
+    font-size: 75px;
+    text-align: center;
+  }
+  ul.indicators{
+    display: none;
+  }
+}
+
 // side-nav padding overrides
 header, main, footer {
   padding-left: 240px;
@@ -29,6 +50,16 @@ header, main, footer {
   header, main, footer {
     padding-left: 0;
   }
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+main.container{
+  padding-bottom: 50px
 }
 
 // navbar overrides
@@ -46,14 +77,12 @@ nav{
   }
 }
 
-#landing .slider{
-  .slides li .caption{
-    font-family: Lobster, Impact, Charcoal, sans-serif;
-    top: 30%;
-    font-size: 75px;
-    text-align: center;
-  }
-  ul.indicators{
-    display: none;
-  }
+// staggered list styles
+.staggered_list li{
+  opacity: 0;
+}
+
+// card title overrides
+.card .card-title{
+  font-weight: bold;
 }
