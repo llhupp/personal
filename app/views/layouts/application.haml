@@ -2,7 +2,7 @@
 %html
   %head
     %title Cosmic Fuse
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application', media: 'all'
     = stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons'
     = csrf_meta_tags
   %body
@@ -13,13 +13,13 @@
             %a.brand-logo.right{href: "#!"}
               = image_tag 'logo.png'
             %ul#slide-out.side-nav.fixed
-              %li
-                %a{href: "#!"} Home
-              %li
-                %a{href: "#!"} Photos
-              %li
+              %li{class: controller_name == 'home' && 'active'}
+                %a{href: '/home'} Home
+              %li{class: controller_name == 'photos' && 'active'}
+                %a{href: '/photos'} Photos
+              %li{class: controller_name == 'events' && 'active'}
                 %a{href: "#!"} Events
-              %li
+              %li{class: controller_name == 'contacts' && 'active'}
                 %a{href: "#!"} Contacts
               %li
                 = link_to "https://www.facebook.com/cosmicfuseband", target: "_blank" do
@@ -35,5 +35,5 @@
           © 2016 by Cosmic Fuse Band
           = link_to "https://github.com/llhupp", target: "_blank", class: 'grey-text text-lighten-4 right' do
             Created by Lyric Hupp
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application'
     = yield :javascripts

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'home#landing'
 
   resources :home, only: :index
+  resources :photos, only: :index
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

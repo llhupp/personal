@@ -12,8 +12,35 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require underscore
 //= require materialize-sprockets
-//= require_tree .
 
 $('.button-collapse').sideNav();
+
+function fbBinder(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}
+
+function fbInit(fbAppId){
+  FB.init({
+    appId      : fbAppId,
+    xfbml      : true,
+    version    : 'v2.5'
+  });
+  return Promise.resolve();
+}
+
+window.accessTokenParam = '';
+
+window.initFbApi = function(fbAppId, fbToken){
+  window.accessTokenParam = 'access_token=' + fbToken;
+
+  return new Promise(function(resolve, reject) {
+    window.fbAsyncInit = resolve.bind(this, fbAppId);
+    fbBinder(document, 'script', 'facebook-jssdk')
+  }).then(fbInit);
+}

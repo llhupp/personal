@@ -1,0 +1,10 @@
+%li.card
+  .card-panel.grey.lighten-5.z-depth-1.hoverable
+    .row.valign-wrapper
+      .col.s5
+        %h4.center-align.red-text.darken-text-4= name
+        = image_tag pic_path, class: 'responsive-img circle'
+        %div.black-text.center-align= instrument
+        %div.grey-text.center-align= instrument_info
+      .col.s7
+        %span.black-text=h(info).gsub(/\n/, '<br/>').html_safe

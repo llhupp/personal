@@ -91,3 +91,11 @@ nav{
 ol li{
   list-style-type: decimal;
 }
+
+.iframe-card{
+  padding: 30px 0;
+  iframe, .fb_iframe_widget, .fb_iframe_widget>span{
+    display: block;
+    margin: auto;
+  }
+}
