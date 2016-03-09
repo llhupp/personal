@@ -13,14 +13,14 @@
             %a.brand-logo.right{href: "#!"}
               = image_tag 'logo.png'
             %ul#slide-out.side-nav.fixed
-              %li{class: controller_name == 'home' && 'active'}
-                %a{href: '/home'} Home
-              %li{class: controller_name == 'photos' && 'active'}
-                %a{href: '/photos'} Photos
-              %li{class: controller_name == 'events' && 'active'}
-                %a{href: "/events"} Events
-              %li{class: controller_name == 'contacts' && 'active'}
-                %a{href: "#!"} Contacts
+              %li{class: isHomePage && 'active'}
+                %a{href: isHomePage ? '#' : '/home', class: 'waves-effect waves-orange'} Home
+              %li{class: isPhotosPage && 'active'}
+                %a{href: isPhotosPage ? '#' : '/photos', class: 'waves-effect waves-orange'} Photos
+              %li{class: isEventsPage && 'active'}
+                %a{href: isEventsPage ? '#' : '/events', class: 'waves-effect waves-orange'} Events
+              %li{class: isContactsPage && 'active'}
+                %a{href: "#!", class: 'waves-effect waves-orange'} Contacts
               %li
                 = link_to "https://www.facebook.com/cosmicfuseband", target: "_blank" do
                   = image_tag 'fb_logo.png'

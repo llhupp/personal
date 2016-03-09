@@ -3,9 +3,26 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  helper_method :fb_app_id
+  helper_method :fb_app_id, :isHomePage, :isPhotosPage, :isEventsPage,
+    :isContactsPage
 
   private
+
+  def isHomePage
+    controller_name == 'home'
+  end
+
+  def isPhotosPage
+    controller_name == 'photos'
+  end
+
+  def isEventsPage
+    controller_name == 'events'
+  end
+
+  def isContactsPage
+    controller_name == 'contacts'
+  end
 
   def fb_app_id
     @fb_app_id ||= ENV['FB_APP_ID']
