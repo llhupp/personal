@@ -99,3 +99,27 @@ ol li{
     margin: auto;
   }
 }
+
+#event-list{
+  .old-event-cover{
+    background: color("orange", 'lighten-5') image-url("past_show.png") no-repeat center center;
+    .row>*{
+      opacity: .3;
+    }
+  }
+
+  .card-panel:hover{
+    .event-details{
+      background: image-url("fb_logo.png") no-repeat top right;
+    }
+    &:not(.old-event-cover){
+      background: color("blue", "lighten-5");
+    }
+  }
+
+  .event-date{
+    i.material-icons{
+      vertical-align: text-bottom;
+    }
+  }
+}

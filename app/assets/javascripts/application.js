@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore
+//= require moment
 //= require materialize-sprockets
 
 $('.button-collapse').sideNav();

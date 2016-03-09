@@ -62,6 +62,8 @@ GEM
     mime-types (2.99.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    momentjs-rails (2.11.0)
+      railties (>= 3.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pry (0.10.3)
@@ -128,6 +130,7 @@ DEPENDENCIES
   haml (~> 4.0.7)
   jquery-rails (~> 4.1.0)
   materialize-sass (~> 0.97.5)
+  momentjs-rails (~> 2.11.0)
   pry
   rails (= 4.2.5.1)
   sass-rails (~> 5.0.4)

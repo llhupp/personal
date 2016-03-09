@@ -9,15 +9,14 @@ function getFbAlbum(params){
 }
 
 function fbAlbumResponseHandler(response){
-  return new Promise(function(resolve, reject) {
-    if (response && !response.error) {
-      photos = response.data || []
-      resolve(photos);
-    } else {
-      console.log('Error fetching Facebook photos')
-      resolve([]);
-    }
-  });
+  var photos;
+  if (response && !response.error) {
+    photos = response.data || [];
+  } else {
+    console.log('Error fetching Facebook photos')
+  }
+
+  return Promise.resolve(photos);
 }
 
 function largestImageSource(photo){
