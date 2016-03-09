@@ -71,8 +71,7 @@ function initPage(photos){
     if(isAnimating){ return null; }
     clearInterval(interval);
     handleStaggeredListFinish();
-  }, 300)
-  var list = $('.staggered_list li');
+  }, 300);
 }
 
 window.runPageJs = function(fbAppId, fbToken) {
