@@ -33,6 +33,5 @@ class HomeController < ApplicationController
       }
     ]
     @members = [ike, ellis, jj]
-    @fb_token = request_fb_token
   end
 end

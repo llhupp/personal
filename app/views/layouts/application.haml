@@ -22,7 +22,7 @@
               %li{class: isContactsPage && 'active'}
                 %a{href: "#!", class: 'waves-effect waves-orange'} Contacts
               %li
-                = link_to "https://www.facebook.com/cosmicfuseband", target: "_blank" do
+                = link_to "https://www.facebook.com/#{fb_page_id}", target: "_blank" do
                   = image_tag 'fb_logo.png'
                   = 'Facebook'
             %a.button-collapse{"data-activates" => "slide-out", :href => "#"}
@@ -37,3 +37,5 @@
             Created by Lyric Hupp
     = javascript_include_tag 'application'
     = yield :javascripts
+    :javascript
+      window.runPageJs('#{fb_app_id}', '#{fb_token}', '#{fb_page_id}');

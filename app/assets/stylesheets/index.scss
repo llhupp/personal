@@ -117,9 +117,22 @@ ol li{
     }
   }
 
-  .event-date{
+  h4.event-title{
+    margin-bottom: 0;
+  }
+
+  h6.event-icon-wrapper {
+    margin-top: 0;
+    display: inline-block;
+
     i.material-icons{
-      vertical-align: text-bottom;
+      position: relative;
+      top: 10px;
+    }
+    .event-icon-details{
+      margin-top: -15px;
+      margin-left: 30px;
+      display: block;
     }
   }
 }

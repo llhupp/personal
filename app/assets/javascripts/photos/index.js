@@ -11,12 +11,12 @@ function getFbAlbum(params){
 function fbAlbumResponseHandler(response){
   var photos;
   if (response && !response.error) {
-    photos = response.data || [];
+    photos = response.data;
   } else {
     console.log('Error fetching Facebook photos')
   }
 
-  return Promise.resolve(photos);
+  return Promise.resolve(photos || []);
 }
 
 function largestImageSource(photo){
@@ -73,6 +73,6 @@ function initPage(photos){
   }, 300);
 }
 
-window.runPageJs = function(fbAppId, fbToken) {
-  window.initFbApi(fbAppId, fbToken).then(getFbAlbum).then(fbAlbumResponseHandler).then(initPage);
+window.runPageJs = function(fbAppId, fbToken, fbPageId) {
+  window.initFbApi(fbAppId, fbToken, fbPageId).then(getFbAlbum).then(fbAlbumResponseHandler).then(initPage);
 }

@@ -36,9 +36,11 @@ function fbInit(fbAppId){
 }
 
 window.accessTokenParam = '';
+window.fbPageId = '';
 
-window.initFbApi = function(fbAppId, fbToken){
+window.initFbApi = function(fbAppId, fbToken, fbPageId){
   window.accessTokenParam = 'access_token=' + fbToken;
+  window.fbPageId = fbPageId;
 
   return new Promise(function(resolve, reject) {
     window.fbAsyncInit = resolve.bind(this, fbAppId);

@@ -1,7 +1,5 @@
 - content_for :javascripts do
   = javascript_include_tag 'home/index'
-  :javascript
-    window.runPageJs('#{fb_app_id}', '#{@fb_token}')
 
 .row.flow-text
   %ul.staggered_list.col.s12.flow-text

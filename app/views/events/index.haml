@@ -1,7 +1,5 @@
 - content_for :javascripts do
   = javascript_include_tag 'events/index'
-  :javascript
-    window.runPageJs('#{fb_app_id}', '#{@fb_token}')
 
 .row
   %ul#event-list.staggered_list.col.s12

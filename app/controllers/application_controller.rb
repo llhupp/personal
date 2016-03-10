@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :fb_app_id, :isHomePage, :isPhotosPage, :isEventsPage,
-    :isContactsPage
+    :isContactsPage, :fb_page_id, :fb_token
 
   private
 
@@ -24,11 +24,15 @@ class ApplicationController < ActionController::Base
     controller_name == 'contacts'
   end
 
+  def fb_page_id
+    '719045114798186'
+  end
+
   def fb_app_id
     @fb_app_id ||= ENV['FB_APP_ID']
   end
 
-  def request_fb_token
+  def fb_token
     @fb_token ||= begin
       uri = URI("https://graph.facebook.com/oauth/access_token?client_id=#{fb_app_id}&client_secret=#{ENV['FB_SECRET']}&grant_type=client_credentials")
       res = Net::HTTP.get_response(uri)

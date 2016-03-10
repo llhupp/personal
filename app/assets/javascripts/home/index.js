@@ -2,9 +2,7 @@ function initPage(photos){
   // TODO: stuff
 }
 
-var accessTokenParam = '';
-
-window.runPageJs = function(fbAppId, fbToken) {
+window.runPageJs = function(fbAppId, fbToken, fbPageId) {
   Materialize.showStaggeredList('.staggered_list');
-  window.initFbApi(fbAppId, fbToken).then(initPage);
+  window.initFbApi(fbAppId, fbToken, fbPageId).then(initPage);
 }
