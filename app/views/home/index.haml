@@ -2,10 +2,23 @@
   = javascript_include_tag 'home/index'
 
 .row.flow-text
-  %ul.staggered_list.col.s12.flow-text
+  %ul.staggered_list.col.s12
+    %li#main-band-card.card
+      .card-panel.grey.lighten-5.z-depth-1.hoverable
+        .row
+          .col.s5
+            = image_tag 'splash.jpg', class: 'responsive-img'
+            %span.card-title.amber-text Classic Rock Fusion
+          .card-content.col.s7.black-text
+            %p Cosmic Fuse is always ready and willing' to add a little rhythm to your groove!
+            %p Cosmic Fuse is a Hammond organ trio with T.J. Ike on M-3 Hammond organ, piano and lead vocals. Tim Ellis on drums and vocals and James Jamar on the bass guitar and vocals.
+            %p Cosmic Fuse is not your grandpa's idea of an organ trio – especially with Tim Ellis on drums – Cosmic Fuse leans a little more rock.
+            %p Cosmic Fuse material is a fusion of Blues, Rock and Jazz musical styles in their originals, organ standards and keyboard influenced cover songs, especially familiar tunes featuring the Hammond organ. 
+            %p The reaction Cosmic Fuse has received from shows they have played has been exciting with comments on how organized and tight the powerful trio is, their very melodic instrumentals and entertaining song selection.
+            %p Defining Cosmos as the harmonic systematic universe, Cosmic Fuse fuses together their own harmonic systematic universe of music for your enjoyment. 
     %li.card
       .card-image
-        %iframe{frameborder: "no", scrolling: "no", src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/160882627&auto_play=true&hide_related=true&show_comments=true&show_user=true&show_reposts=false&visual=true", width: "100%", height: "150px"}
+        %iframe{frameborder: "no", scrolling: "no", src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/160882627&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&visual=true", width: "100%", height: "150px"}
       .card-content
         %p.card-title CosmicFuse Demo Includes:
         %small This demo includes a variety of original and cover material that include highlights from a sample mix of eight tunes.
@@ -36,8 +49,3 @@
             %span.red-text.darken-text-4 The Hip Hop
     - @members.each  do |m|
       = render 'member_card', m
-    %li.card.iframe-card
-      - @fb_events.each do |fb|
-        .fb-post{"data-href" => fb[:event_url], "data-width" => "500"}
-    %li.card.iframe-card
-      %iframe{frameborder: "0", height: "600", width: "80%", style: "border-width:0", scrolling: "no", src: "https://calendar.google.com/calendar/embed?showTitle=0&showTabs=0&showCalendars=0&height=600&wkst=2&src=isd9lskm8sahs0opvs8o2nkqdc%40group.calendar.google.com&ctz=America%2FChicago"}

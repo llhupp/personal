@@ -2,10 +2,10 @@
 %html
   %head
     %title Cosmic Fuse
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'landing', media: 'all'
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Lobster'
     = csrf_meta_tags
   %body#landing
     = yield
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'landing'
     = yield :javascripts

@@ -11,5 +11,5 @@
  * file per style scope.
  *
  *= require materialize_overrides
- *= require index
+ *= require landing_index
  */

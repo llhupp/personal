@@ -1,46 +1,5 @@
 @charset "UTF-8";
 
-// Mixins
-@import "materialize/components/prefixer";
-@import "materialize/components/mixins";
-@import "materialize/components/color";
-
-// override variables
-$primary-color: black !default;
-$primary-color-light: lighten($primary-color, 15%) !default;
-$primary-color-dark: darken($primary-color, 15%) !default;
-
-// Variables
-@import "materialize/components/variables";
-
-// Reset
-@import "materialize/components/normalize";
-
-// materialize/components
-@import "materialize";
-
-
-html { 
-  background: image-url("grey_background.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-// landing page styles
-#landing .slider{
-  .slides li .caption{
-    font-family: Lobster, Impact, Charcoal, sans-serif;
-    top: 30%;
-    font-size: 75px;
-    text-align: center;
-  }
-  ul.indicators{
-    display: none;
-  }
-}
-
 // side-nav padding overrides
 header, main, footer {
   padding-left: 240px;
@@ -134,5 +93,17 @@ ol li{
       margin-left: 30px;
       display: block;
     }
+  }
+}
+
+#main-band-card.card{
+  .card-title{
+    font-family: Lobster, Impact, Charcoal, sans-serif;
+    bottom: 50%;
+    left: 33%;
+  }
+  .card-content p{
+    font-size: 65%;
+    padding-bottom: 10px;
   }
 }
