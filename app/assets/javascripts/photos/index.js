@@ -3,7 +3,7 @@ function getFbAlbum(params){
     FB.api([
       "/719049914797706/photos?",
       window.accessTokenParam,
-      "&fields=images"
+      "&fields=images&order=reverse_chronological"
     ].join(''), resolve);
   });
 }

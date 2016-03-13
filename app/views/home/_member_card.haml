@@ -1,10 +1,10 @@
 %li.card
   .card-panel.grey.lighten-5.z-depth-1.hoverable
     .row
-      .col.s5
+      .col.s5.member-card-image
         %h4.center-align.red-text.darken-text-4= name
         = image_tag pic_path, class: 'responsive-img'
-        %div.black-text.center-align= instrument
+        %div.member-card-instrument.black-text.center-align= instrument
         %div.grey-text.center-align= instrument_info
-      .col.s7
+      .col.s7.member-card-content
         %span.black-text=h(info).gsub(/\n/, '<br/>').html_safe

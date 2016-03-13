@@ -33,8 +33,9 @@ function listEventItem(fbEvent){
   var eventStartTime = moment(fbEvent.start_time);
   var eventEndTime = fbEvent.end_time && moment(fbEvent.end_time);
   var now = Date.now();
-  var startTimeDiff = eventStartTime && eventStartTime - now;
-  var endTimeDiff = eventEndTime && eventEndTime - now;
+  var startTimeUntilNow = eventStartTime && eventStartTime - now;
+  var endTimeUntilNow = eventEndTime && eventEndTime - now;
+  var sixHours = -1000 * 60 * 60 * 6;
   var startDateString = eventStartTime.format('dddd, MMMM Do');
   var startTimeString = eventStartTime.format(timeFormat);
   var endTimeString = eventEndTime ? eventEndTime.format(timeFormat) : '???';
@@ -42,9 +43,11 @@ function listEventItem(fbEvent){
   var isOld = false;
 
   if(eventEndTime != null){
-    isOld = endTimeDiff < 0;
+    // event is old after `eventEndTime`
+    isOld = endTimeUntilNow < 0;
   } else if (eventStartTime != null) {
-    isOld = startTimeDiff < 0;
+    // no `eventEndTime`... event is old after 6 hours since `eventStartTime`
+    isOld = startTimeUntilNow < sixHours;
   }
 
   var liCss = 'card-panel hoverable z-depth-1';
@@ -61,7 +64,9 @@ function listEventItem(fbEvent){
       "<h6 class='event-icon-wrapper'>",
       "  <i class='small material-icons'>location_on</i>",
       "  <span class='event-icon-details'>",
-      "    <div>", fbEventPlace.name,"</div>",
+      "    <div class='", fbEventLocation ? 'event-location-name' : '',"'>",
+      "    ", fbEventPlace.name,
+      "    </div>",
       "    <span>", fullAddrString, "</span>",
       "  </span>",
       "</h6>"
