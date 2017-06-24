@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
     @fb_token ||= begin
       uri = URI("https://graph.facebook.com/oauth/access_token?client_id=#{fb_app_id}&client_secret=#{ENV['FB_SECRET']}&grant_type=client_credentials")
       res = Net::HTTP.get_response(uri)
-      res.code == '200' ? res.body.split('=')[1] : nil
+      res.code == '200' ? JSON.parse(res.body)["access_token"] : nil
     end
   end
 end
