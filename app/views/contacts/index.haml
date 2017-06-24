@@ -1,0 +1,22 @@
+- content_for :javascripts do
+  = javascript_include_tag 'contacts/index'
+
+.row.flow-text
+  %ul.staggered_list.col.s12
+    %li#main-contacts-card.card.hoverable
+      .card-image
+        = image_tag 'contacts.jpg', class: 'responsive-img'
+      .card-content
+        %p.card-title Contact CosmicFuse:
+        %small Contact us for booking or questions you may have!
+        %ul
+          %li
+            %span.black-text Ike
+            %span.red-text.darken-text-4 952-472-2802
+            %span.grey-text tjikefuse@gmail.com
+          %li
+            %span.black-text Tim
+            %span.red-text.darken-text-4 651-206-0026
+          %li
+            %span.black-text James
+            %span.red-text.darken-text-4 651-208-0615

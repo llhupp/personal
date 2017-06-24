@@ -10,7 +10,7 @@ class HomeController < ApplicationController
       name: 'T.J. Ike',
       instrument: 'Keys',
       instrument_info:  'Kurzweil SP88 · Kawai K-4 · Hammond Organ',
-      info: "Ike has over 40 years experience working with bands and in studios. He first came to the Twin Cities in 1977 with a blues band our to Iowa knows as The Little Red Rooster Band. In 1978 the band relocated to Minneapolis and cut an album in The Studio in St. Paul. The mixing was done by Sound 80. The title of the album was Authorized Bootleg. The band and the album did well, but the band decided to move back to Iowa where they are now knows as The Blue Band.\n\nIke remained in the Twin Cities to further pursue his musical career, playing both with local projects and road bands booked out of the area. In addition to Ike's many musical talents, he also has a degree in Audio Recording from Hennepin Technical College in Eden Prairie, MN."
+      info: "Ike has over 40 years experience working with bands and in studios. He first came to the Twin Cities in 1977 with a blues band, out of Iowa, known as The Little Red Rooster Band. In 1978 the band relocated to Minneapolis and cut an album in The Studio in St. Paul. The mixing was done by Sound 80. The title of the album was Authorized Bootleg. The band and the album did well, but the band decided to move back to Iowa where they are now known as The Blue Band.\n\nIke remained in the Twin Cities to further pursue his musical career, playing both with local projects and road bands booked out of the area. In addition to Ike's many musical talents, he also has a degree in Audio Recording from Hennepin Technical College in Eden Prairie, MN."
     }
     ellis = {
       pic_path: 'ellis_member.png',

@@ -21,7 +21,7 @@
               %li{class: isEventsPage && 'active'}
                 %a{href: isEventsPage ? '#' : '/events', class: 'waves-effect waves-orange'} Events
               %li{class: isContactsPage && 'active'}
-                %a{href: "#!", class: 'waves-effect waves-orange'} Contacts
+                %a{href: isContactsPage ? '#' : '/contacts', class: 'waves-effect waves-orange'} Contacts
               %li
                 = link_to "https://www.facebook.com/#{fb_page_id}", target: "_blank" do
                   = image_tag 'fb_logo.png'
