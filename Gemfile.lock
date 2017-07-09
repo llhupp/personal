@@ -56,7 +56,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    materialize-sass (0.97.5)
+    materialize-sass (0.99.0)
       sass (~> 3.3)
     method_source (0.8.2)
     mime-types (2.99.1)
@@ -129,7 +129,7 @@ PLATFORMS
 DEPENDENCIES
   haml (~> 4.0.7)
   jquery-rails (~> 4.1.0)
-  materialize-sass (~> 0.97.5)
+  materialize-sass (~> 0.99.0)
   momentjs-rails (~> 2.11.0)
   pry
   rails (= 4.2.5.1)
@@ -137,5 +137,8 @@ DEPENDENCIES
   uglifier (~> 2.7.2)
   underscore-rails (~> 1.8.3)
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.12.3

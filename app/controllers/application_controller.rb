@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :fb_app_id, :isHomePage, :isPhotosPage, :isEventsPage,
-    :isContactsPage, :fb_page_id, :fb_token
+    :isContactsPage, :isSongsPage, :fb_page_id, :fb_token
 
   private
 
@@ -22,6 +22,10 @@ class ApplicationController < ActionController::Base
 
   def isContactsPage
     controller_name == 'contacts'
+  end
+
+  def isSongsPage
+    controller_name == 'songs'
   end
 
   def fb_page_id

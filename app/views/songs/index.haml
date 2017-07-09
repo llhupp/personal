@@ -1,0 +1,91 @@
+- content_for :javascripts do
+  = javascript_include_tag 'songs/index'
+
+.row.flow-text
+  %ul.staggered_list.col.s12
+    %li#main-songs-card.card.hoverable
+      .card-image
+        = image_tag 'blurry.jpg', class: 'responsive-img'
+      .card-content
+        %p.card-title Cover Songs:
+        %ul
+          %li
+            %span.red-text.darken-text-4 Mission Impossible Theme
+            %span.grey-text &nbsp;&#124;&nbspBilly May
+          %li
+            %span.red-text.darken-text-4 Evil Ways
+            %span.grey-text &nbsp;&#124;&nbspSantana
+          %span.red-text.darken-text-4 Black Magic Woman
+          %li
+            %span.red-text.darken-text-4 Hush
+            %span.grey-text &nbsp;&#124;&nbspDeep Purple
+          %li
+            %span.red-text.darken-text-4 Lazy
+            %span.grey-text &nbsp;&#124;&nbspDeep Purple
+          %li
+            %span.red-text.darken-text-4 Comfortably Numb
+            %span.grey-text &nbsp;&#124;&nbspPink Floyd
+          %li
+            %span.red-text.darken-text-4 Brain Damage
+            %span.grey-text &nbsp;&#124;&nbspPink Floyd
+          %li
+            %span.red-text.darken-text-4 Time is Tight
+            %span.grey-text &nbsp;&#124;&nbspBooker T and the MG's
+          %li
+            %span.red-text.darken-text-4 Green Onions
+            %span.grey-text &nbsp;&#124;&nbspBooker T and the MG's
+          %li
+            %span.red-text.darken-text-4 Fire
+            %span.grey-text &nbsp;&#124;&nbspJimi Hendrix
+          %li
+            %span.red-text.darken-text-4 Wind Cries Mary
+            %span.grey-text &nbsp;&#124;&nbspJimi Hendrix
+          %li
+            %span.red-text.darken-text-4 Come Together
+            %span.grey-text &nbsp;&#124;&nbspBeatles
+          %li
+            %span.red-text.darken-text-4 Born to be Wild
+            %span.grey-text &nbsp;&#124;&nbspSteppenwolf
+          %li
+            %span.red-text.darken-text-4 Peter Gunn
+            %span.grey-text &nbsp;&#124;&nbspEmerson, Lake, and Palmer
+          %li
+            %span.red-text.darken-text-4 Mercy, Mercy
+            %span.grey-text &nbsp;&#124;&nbspCannonball Aderly
+          %li
+            %span.red-text.darken-text-4 Gimme Some Lovin'
+            %span.grey-text &nbsp;&#124;&nbspSpencer Davis Group
+          %li
+            %span.red-text.darken-text-4 Steppin' Stone
+            %span.grey-text &nbsp;&#124;&nbspMonkees
+          %li
+            %span.red-text.darken-text-4 Green Eyed Lady
+            %span.grey-text &nbsp;&#124;&nbspSugarloaf
+          %li
+            %span.red-text.darken-text-4 Pretzelogic
+            %span.grey-text &nbsp;&#124;&nbspSteely Dan
+          %li
+            %span.red-text.darken-text-4 Suffragette City
+            %span.grey-text &nbsp;&#124;&nbspDavid Bowie
+          %li
+            %span.red-text.darken-text-4 Dreams
+            %span.grey-text &nbsp;&#124;&nbspMolly Hatchet
+          %li
+            %span.red-text.darken-text-4 For What It's Worth
+            %span.grey-text &nbsp;&#124;&nbspBuffalo Springfield
+          %li
+            %span.red-text.darken-text-4 Sympathy for the Devil
+            %span.grey-text &nbsp;&#124;&nbspThe Rolling Stones
+          %li
+            %span.red-text.darken-text-4 Stormy Monday
+            %span.grey-text &nbsp;&#124;&nbspAllman Brothers
+          %li
+            %span.red-text.darken-text-4 Lawyers, Guns, and Money
+            %span.grey-text &nbsp;&#124;&nbspWarren Zeven
+          %li
+            %span.red-text.darken-text-4 Let's Work Together
+            %span.grey-text &nbsp;&#124;&nbspCanned Heat
+          %li
+            %span.red-text.darken-text-4 Ride, Captain, Ride
+            %span.grey-text &nbsp;&#124;&nbspBlues Image
+    = render '/shared/sample_music_card'

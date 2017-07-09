@@ -16,6 +16,8 @@
             %ul#slide-out.side-nav.fixed
               %li{class: isHomePage && 'active'}
                 %a{href: isHomePage ? '#' : '/home', class: 'waves-effect waves-orange'} Home
+              %li{class: isSongsPage && 'active'}
+                %a{href: isSongsPage ? '#' : '/songs', class: 'waves-effect waves-orange'} Songs
               %li{class: isPhotosPage && 'active'}
                 %a{href: isPhotosPage ? '#' : '/photos', class: 'waves-effect waves-orange'} Photos
               %li{class: isEventsPage && 'active'}

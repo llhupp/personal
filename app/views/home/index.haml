@@ -13,30 +13,6 @@
         %p Cosmic Fuse material is a fusion of Blues, Rock and Jazz musical styles in their originals, organ standards and keyboard influenced cover songs, especially familiar tunes featuring the Hammond organ.
         %p The reaction Cosmic Fuse has received from shows they have played has been exciting with comments on how organized and tight the powerful trio is, their very melodic instrumentals and entertaining song selection.
         %p Defining Cosmos as the harmonic systematic universe, Cosmic Fuse fuses together their own harmonic systematic universe of music for your enjoyment.
-    %li.card.hoverable
-      .card-image
-        %iframe{frameborder: "no", scrolling: "no", src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/330653159&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&visual=true", width: "100%", height: "150px"}
-      .card-content
-        %p.card-title CosmicFuse Demo Includes:
-        %small This demo includes a variety of original and cover material that include highlights from a sample mix of nine tunes.
-        %ol
-          %li
-            %span.red-text.darken-text-4 Triple-A for Double-I
-          %li
-            %span.red-text.darken-text-4 Mission Impossible
-          %li
-            %span.red-text.darken-text-4 Peter Gunn
-          %li
-            %span.red-text.darken-text-4 Go Get It
-          %li
-            %span.red-text.darken-text-4 Inferno
-          %li
-            %span.red-text.darken-text-4 Sensimilla
-          %li
-            %span.red-text.darken-text-4 The Hip Hop
-          %li
-            %span.red-text.darken-text-4 Deep Fried Funk
-          %li
-            %span.red-text.darken-text-4 Strutt'n
+    = render '/shared/sample_music_card'
     - @members.each  do |m|
       = render 'member_card', m

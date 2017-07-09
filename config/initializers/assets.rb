@@ -4,7 +4,7 @@
 Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w(
-	landing.css landing.js home/index.js photos/index.js events/index.js contacts/index.js
+	landing.css landing.js home/index.js photos/index.js events/index.js contacts/index.js songs/index.js
 )
 
 # Add additional assets to the asset load path
