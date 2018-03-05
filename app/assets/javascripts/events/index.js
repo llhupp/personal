@@ -50,9 +50,8 @@ function listEventItem(fbEvent){
     isOld = startTimeUntilNow < sixHours;
   }
 
-  var liCss = 'card-panel hoverable z-depth-1';
   if (isOld) {
-    liCss += ' old-event-cover';
+    return null;
   }
 
   var locationHtml;
@@ -76,7 +75,7 @@ function listEventItem(fbEvent){
   }
 
   return [
-    "<li class='", liCss, "'>",
+    "<li class='card-panel hoverable z-depth-1'>",
     "  <a class='row black-text' target='_blank' href=https://www.facebook.com/events/", fbEvent.id,">",
     "    <div class='col s5'>",
     "      <img src=", fbEvent.cover.source, " alt='' class='responsive-img'>",
@@ -100,7 +99,10 @@ function initPage(fbEvents){
   var photoList = $('#event-list');
 
   fbEvents.forEach(function(p){
-    photoList.append(listEventItem(p));
+    var item = listEventItem(p);
+    if (item != null) {
+      photoList.append(item);
+    }
   });
 
   Materialize.showStaggeredList('.staggered_list');
