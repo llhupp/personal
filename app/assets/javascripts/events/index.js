@@ -1,7 +1,7 @@
 function getFbEvents(params){
   return new Promise(function(resolve) {
     var apiUrl = '/' + window.fbPageId + '/events?';
-    var locationString = 'place{name, location{' + [
+    var locationString = 'place{name,location{' + [
       'city', 'country', 'latitude', 'located_in', 'longitude', 'name', 'region', 'state', 'street', 'zip'
     ].join(',') + '}}';
     var fieldsString = '&fields=' + [
@@ -11,7 +11,7 @@ function getFbEvents(params){
     FB.api([
       apiUrl,
       window.accessTokenParam,
-      fieldsString
+      fieldsString,
     ].join(''), resolve);
   });
 }

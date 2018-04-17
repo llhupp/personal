@@ -22,7 +22,7 @@ function fbBinder(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js";
+  js.src = "https://connect.facebook.net/en_US/sdk.js";
   fjs.parentNode.insertBefore(js, fjs);
 }
 
@@ -30,7 +30,7 @@ function fbInit(fbAppId){
   FB.init({
     appId      : fbAppId,
     xfbml      : true,
-    version    : 'v2.5'
+    version    : 'v2.12'
   });
   return Promise.resolve();
 }
