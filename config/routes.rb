@@ -7,8 +7,6 @@ Rails.application.routes.draw do
 
   resources :home, only: :index
   resources :contacts, only: :index
-  resources :events, only: :index
-  resources :photos, only: :index
   resources :songs, only: :index
 
   # Example of regular route:
